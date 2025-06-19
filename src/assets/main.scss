@@ -1,6 +1,12 @@
 @use './base.scss' as *;
 
 #app {
-  // max-width: 1280px;
   margin: 0 auto;
+  font-weight: normal;
+  max-inline-size: var(--layout-desktop);
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,4 +1,44 @@
+@use './base/colors' as *;
+@use './base/layout' as *;
+@use './base/typography' as *;
+@use './utils/functions.scss';
+
 :root {
+  --color-primary-red: #{$red};
+  --color-primary-cyan: #{$cyan};
+  --color-primary-orange: #{$orange};
+  --color-primary-blue: #{$blue};
+
+  --color-neutral-grey-500: #{$grey-500};
+  --color-neutral-grey-400: #{$grey-400};
+  --color-neutral-white: #{$white};
+
+  --font-size: #{$font-size};
+
+  --font-family: '#{$family}';
+  --font-family-light: '#{$family + "-light"}';
+  --font-family-semi-bold: '#{$family + "-semi-bold"}';
+
+  --layout-mobile: #{functions.calc-rem($mobile)};
+  --layout-desktop: #{functions.calc-rem($desktop)};
+
+  font-size: calc($font-size / 16 * 1em);
+}
+
+@font-face {
+  font-family: $family;
+  src: url('./fonts/Poppins/Poppins-Regular.ttf');
+  font-weight: $weight-normal;
+}
+@font-face {
+  font-family: #{$family + '-light'};
+  src: url('./fonts/Poppins/Poppins-ExtraLight.ttf');
+  font-weight: $weight-light;
+}
+@font-face {
+  font-family: #{$family + '-semi-bold'};
+  src: url('./fonts/Poppins/Poppins-SemiBold.ttf');
+  font-weight: $weight-semi-bold;
 }
 
 *,
@@ -12,18 +52,25 @@
 
 body {
   min-height: 100vh;
-  // color: var(--color-text);
-  // background: var(--color-background);
+  color: var(--color-neutral-grey-400);
+  background-color: color-mix(in srgb, var(--color-neutral-grey-400) 4%, transparent);
   transition:
     color 0.5s,
     background-color 0.5s;
-  // line-height: 1.6;
+  line-height: 1.4;
   font-family:
-    // Inter,
-
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  // font-size: 15px;
+    var(--font-family),
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
