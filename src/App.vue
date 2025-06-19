@@ -80,7 +80,7 @@
   text-align: center;
   gap: calc-rem(20);
   inline-size: clamp(10rem, 100%, calc-rem(600));
-  margin-top: clamp(0rem, 0rem + 6vw, calc-rem(70));
+  margin-block-start: clamp(0rem, 0rem + 6vw, calc-rem(70));
 
   &__heading {
     line-height: clamp(110%, 110% + 30vw, 150%);
@@ -138,8 +138,8 @@
     inline-size: 100%;
     background-color: var(--color-primary-cyan);
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
   }
 
   &__line--red {
@@ -163,11 +163,11 @@
   &__body {
     display: grid;
     row-gap: calc(32);
-    padding-bottom: calc-rem(16);
+    padding-block-end: calc-rem(16);
   }
 
   &__description {
-    margin-top: calc-rem(6);
+    margin-block-start: calc-rem(6);
     font-size: calc-rem(13);
     line-height: 1.6;
     letter-spacing: calc-rem(0.2);
@@ -190,7 +190,7 @@
 }
 
 .p-footer {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 .attribution {
