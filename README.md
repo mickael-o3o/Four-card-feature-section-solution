@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Built with
 
-- - [Vue](https://vuejs.org)
+- [Vue](https://vuejs.org)
 - [Sass](https://sass-lang.com)
 - Mobile-first workflow
 - CSS custom properties
