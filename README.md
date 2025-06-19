@@ -1,39 +1,51 @@
-# vue-app
+# Frontend Mentor - Four card feature section solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Type Support for `.vue` Imports in TS
+## Overview
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### The challenge
 
-## Customize configuration
+Users should be able to:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- View the optimal layout for the site depending on their device's screen size
 
-## Project Setup
+### Screenshot
 
-```sh
-pnpm install
-```
+![](./screenshot.png)
 
-### Compile and Hot-Reload for Development
+### Links
 
-```sh
-pnpm dev
-```
+- Solution URL: [https://github.com/mickael-o3o/Four-card-feature-section-solution.git](https://github.com/mickael-o3o/Four-card-feature-section-solution.git)
+- Live Site URL: [https://mickael-o3o.github.io/Four-card-feature-section-solution/](https://mickael-o3o.github.io/Four-card-feature-section-solution/)
 
-### Type-Check, Compile and Minify for Production
+## My process
 
-```sh
-pnpm build
-```
+### Built with
 
-### Lint with [ESLint](https://eslint.org/)
+- - [Vue](https://vuejs.org)
+- [Sass](https://sass-lang.com)
+- Mobile-first workflow
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-```sh
-pnpm lint
-```
+### What I learned
+
+Using grid to easily implement complexe page layout.
+
+## Author
+
+- Frontend Mentor - [@mickael-o3o](https://www.frontendmentor.io/profile/mickael-o3o)
