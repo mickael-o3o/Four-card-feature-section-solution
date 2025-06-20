@@ -190,7 +190,8 @@
 }
 
 .p-footer {
-  margin-block-end: 1rem;
+  margin: 1rem;
+  margin-block-start: 0;
 }
 
 .attribution {
