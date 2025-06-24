@@ -11,51 +11,71 @@
   </header>
   <main class="p-main">
     <article class="c-card c-card--two-rows">
-      <div class="c-card__line"></div>
       <header class="c-card__heading">
         <h2 class="c-card__title">Supervisor</h2>
       </header>
-      <section class="c-card__body">
+      <div class="c-card__body">
         <p class="c-card__description">Monitors activity to identify project roadblocks</p>
-        <img class="c-card__icon" src="./assets/svgs/icon-supervisor.svg" alt="" />
-      </section>
+        <img
+          class="c-card__icon"
+          width="64px"
+          height="64px"
+          src="./assets/svgs/icon-supervisor.svg"
+          alt=""
+        />
+      </div>
     </article>
 
-    <article class="c-card">
-      <div class="c-card__line c-card__line--red"></div>
+    <article class="c-card c-card--red">
       <header class="c-card__heading">
         <h2 class="c-card__title">Team Builder</h2>
       </header>
-      <section class="c-card__body">
+      <div class="c-card__body">
         <p class="c-card__description">
           Scans our talent network to create the optimal team for your project
         </p>
-        <img class="c-card__icon" src="./assets/svgs/icon-team-builder.svg" alt="" />
-      </section>
+        <img
+          class="c-card__icon"
+          width="64px"
+          height="64px"
+          src="./assets/svgs/icon-team-builder.svg"
+          alt=""
+        />
+      </div>
     </article>
 
-    <article class="c-card">
-      <div class="c-card__line c-card__line--orange"></div>
+    <article class="c-card c-card--orange">
       <header class="c-card__heading">
         <h2 class="c-card__title">Karma</h2>
       </header>
-      <section class="c-card__body">
+      <div class="c-card__body">
         <p class="c-card__description">Regularly evaluates our talent to ensure quality</p>
-        <img class="c-card__icon" src="./assets/svgs/icon-karma.svg" alt="" />
-      </section>
+        <img
+          class="c-card__icon"
+          width="64px"
+          height="64px"
+          src="./assets/svgs/icon-karma.svg"
+          alt=""
+        />
+      </div>
     </article>
 
-    <article class="c-card c-card--two-rows-two">
-      <div class="c-card__line c-card__line--blue"></div>
+    <article class="c-card c-card--two-rows-two c-card--blue">
       <header class="c-card__heading">
         <h2 class="c-card__title">Calculator</h2>
       </header>
-      <section class="c-card__body">
+      <div class="c-card__body">
         <p class="c-card__description">
           Uses data from past projects to provide better delivery estimates
         </p>
-        <img class="c-card__icon" src="./assets/svgs/icon-calculator.svg" alt="" />
-      </section>
+        <img
+          class="c-card__icon"
+          width="64px"
+          height="64px"
+          src="./assets/svgs/icon-calculator.svg"
+          alt=""
+        />
+      </div>
     </article>
   </main>
   <footer class="p-footer">
@@ -63,7 +83,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by
-      <a href="https://github.com/mickael-o3o/Four-card-feature-section-solution.git">Mickael-o3o</a
+      <a href="https://github.com/mickael-o3o/Four-card-feature-section-solution.git">mickael-o3o</a
       >.
     </p>
   </footer>
@@ -123,35 +143,24 @@
   background-color: var(--color-neutral-white);
   box-shadow: 0 calc-rem(15) calc-rem(15)
     color-mix(in srgb, var(--color-neutral-grey-400) 20%, transparent);
-  border-radius: calc-rem(8);
   overflow: hidden;
+  border-radius: 0.5rem;
   padding: calc-rem(32);
   position: relative;
   inline-size: 100%;
 
-  @media (min-width: 25rem) {
-    max-inline-size: calc-rem(350);
-  }
-
-  &__line {
-    block-size: calc-rem(4);
-    inline-size: 100%;
-    background-color: var(--color-primary-cyan);
+  &::before {
+    content: '';
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 0.25rem;
+    background-color: var(--color-primary-cyan);
   }
 
-  &__line--red {
-    background-color: var(--color-primary-red);
-  }
-
-  &__line--orange {
-    background-color: var(--color-primary-orange);
-  }
-
-  &__line--blue {
-    background-color: var(--color-primary-blue);
+  @media (min-width: 25rem) {
+    max-inline-size: calc-rem(350);
   }
 
   &__title {
@@ -180,8 +189,28 @@
   }
 }
 
-.c-card--two-rows {
-  grid-row: 1 / span 2;
+.c-card {
+  &--two-rows {
+    grid-row: 1 / span 2;
+  }
+
+  &--red {
+    &::before {
+      background-color: var(--color-primary-red);
+    }
+  }
+
+  &--orange {
+    &::before {
+      background-color: var(--color-primary-orange);
+    }
+  }
+
+  &--blue {
+    &::before {
+      background-color: var(--color-primary-blue);
+    }
+  }
 }
 
 .c-card--two-rows-two {
@@ -195,7 +224,7 @@
 }
 
 .attribution {
-  border: calc-rem(2) solid var(--color-neutral-grey-500);
+  border: 0.0625rem solid var(--color-neutral-grey-500);
   padding: calc-rem(12);
   margin: auto;
   font-family: monospace;
